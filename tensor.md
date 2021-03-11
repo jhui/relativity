@@ -1,8 +1,26 @@
 $$
 \begin{align}
+∆τ = \sqrt{\text{ten years}} \quad \text{from } (0, 0, 0, 0) \text{ to }(10, 0, 0, 0)\\
 
-\text{In rest frame: } S, \\
-\text{Head of the train: } (0, l) \\
+\quad \text{from } (0, 0, 0, 0) \text{ to }(10, 0, 0, 0)\\
+
+∆s^2 & = -(∆ct)^2 + ∆x^2 + ∆y^2 + ∆z^2 \\
+∆τ^2 & = (∆ct)^2 - ∆x^2 - ∆y^2 - ∆z^2 \\
+∆s^2 & = -(∆ct)^2 + ∆x^2 \\
+&= -γ^2\left(\left( ∆ct'- \frac{v∆x'}{c} \right)^2 +  \left( ∆x' - v∆t' \right)^2 \right) \text{(Apply Lorentz transformation from t to t')}\\
+&= -γ^2 \left(∆ct' - \frac{v∆x'}{c} \right)^2
+ +  γ^2 \left( ∆x' - v∆t' \right)^2\\
+&= -γ^2\left( (∆ct')^2  - 2v∆x'∆t' +\frac{(v∆x')^2}{c^2} - ∆x'^2 + 2v∆x'∆t' - (v∆t')^2\right) \\
+& =  -\frac{c^2}{c^2 - v^2}\left( c^2(∆t')^2  - v^2(∆t')^2 +\frac{v^2(∆x')^2}{c^2} - ∆x'^2  \right) \\
+& = -(∆ct')^2 -\frac{ (v^2 - c^2)∆x'^2}{c^2 - v^2}  \\
+& = -(∆ct')^2 + ∆x'^2 \\
+& = ∆s'^2
+
+\\
+&\text{In rest frame: } S, \\
+&\text{Head of the train: } (0, l) \\
+&\text{Tail of the train: } (0, 0) \\
+
 \end{align}
 
 $$
