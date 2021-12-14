@@ -1,5 +1,24 @@
 $$
 \begin{align}
+\text{Speed of light} &= \frac{\text{distance travel}}{\text{time}} \\
+F &= ma = \frac{d^2 x}{d t^2} \\
+x' & = x - Vt \\
+y' & = y \\
+z' & = z \\
+t' &= t \\
+x' & = x + v_xt \\
+y' & = y + v_yt \\
+z' & = z + v_zt \\
+t' &= t \\
+∇ \cdot \textbf{E} &=  0 \\
+∇ \times \textbf{E} &= - \frac{∂ \textbf{B}}{∂t} \\
+∇ \cdot \textbf{B} &= 0 \\
+∇ \times \textbf{B} &= μ_0 ε_0 \frac{∂ \textbf{E}}{∂t} \\
+\end{align}
+$$
+
+$$
+\begin{align}
 ∆τ = \sqrt{\text{ten years}} \quad \text{from } (0, 0, 0, 0) \text{ to }(10, 0, 0, 0)\\
 
 \quad \text{from } (0, 0, 0, 0) \text{ to }(10, 0, 0, 0)\\
