@@ -1399,15 +1399,15 @@ $$
 \begin{align}
 Section 16 b \\
 
-& ‖ x ‖ ≥ 0, \quad \quad  \quad \quad \quad \quad  \quad \quad \quad \quad \quad  \quad \quad \text{(non-negative)}. \\
-& ‖ x ‖ = 0 \iff x = 0, \quad \quad  \quad \quad  \quad \quad  \quad \quad \text{(positive definite)}. \\
-& ‖ \lambda \cdot x ‖ = |\lambda| ‖ x ‖, \quad \forall \lambda \in 𝔽, x \in X,  \quad \quad \text{(absolutely homogeneous).} \\
-& ‖ x + y  ‖ ≤ ‖ x  ‖ + ‖ y  ‖, \forall x, y \in X, \quad \quad \quad \text{(triangle inequality)}. \\
+& ‖ x ‖ ≥ 0, &\text{(non-negative)}. \\
+& ‖ x ‖ = 0 \iff x = 0, & \text{(positive definite)}. \\
+& ‖ \lambda \cdot x ‖ = |\lambda| ‖ x ‖, \quad \forall \lambda \in 𝔽, x \in X,  & \text{(absolutely homogeneous).} \\
+& ‖ x + y  ‖ ≤ ‖ x  ‖ + ‖ y  ‖, \forall x, y \in X, & \text{(triangle inequality)}. \\
 \\
 & 𝔽 \in \{ \mathbb{R}, \mathbb{C} \}, x \in X \text{ (a 𝔽-vector space).}\\
 & \text{(A vector space with the scalar in the scalar multiplication be $ \mathbb{R}$ or $\mathbb{C}$.)} \\
-‖ Ø ‖ & = ‖ v + (-v) ‖ ≤ ‖ v ‖ + ‖ -v ‖ = 2 ‖ v ‖, \\
-‖ v ‖ & ≥ 0. \\
+‖ Ø ‖ & = ‖ x + (-x) ‖ ≤ ‖ x ‖ + ‖ -x ‖ = 2 ‖ x ‖, \\
+‖ x ‖ & ≥ 0. \\
 & d(x, y) = ‖ x -y  ‖. \\
 &d(x_m - x_n) < \epsilon, \quad \quad \epsilon >0 , \exists N \in \mathbb{N} \text{ and } n,m > N. \\
 
@@ -1504,9 +1504,9 @@ Section 17 \\
 \text{Absolute-value norm : }& ‖x‖ = |x| \text{ for one-dimensional vector spaces,}  
 \\
 \text{Manhattan norm: }& ‖x‖_1 = \sqrt{ \sum_{i=1}^n | x_i| },\\
-\text{Euclidean norm ($L^2$ norm): }& ‖x‖_2 = \sqrt{ \sum_{i=1}^n x_i^2 },\\
+\text{Euclidean norm ($l^2$ norm): }& ‖x‖_2 = \sqrt{ \sum_{i=1}^n x_i^2 },\\
 \text{p-norm: }& ‖x‖_p = \Bigg({\sum_{i=1}^n |x_i^p| }\Bigg)^{\frac{1}{p}},\\
-\text{Max norm ($L_{\infty}$ norm): }& ‖x‖_\infty = \max(|x_1|, |x_2|, \cdots, |x_n|),\\
+\text{Max norm ($l_{\infty}$ norm): }& ‖x‖_\infty = \max(|x_1|, |x_2|, \cdots, |x_n|),\\
 
 \text{Frobenius norm): }& ‖x‖_F =  \Bigg({\sum_{ij} A_{ij}^2 }\Bigg)^{\frac{1}{2}}.\\
 \\
@@ -1677,8 +1677,10 @@ x_2^2  \\
 
 (x_1, x_2) \rightarrow (x_1^2, \sqrt{2} x_1 x_2, x_1)
 \\
+\\
 
-K(x, y) = \Bigg\langle
+\\
+k(x, y) = \Bigg\langle
 \begin{pmatrix}
 1 \\
 x_1  \\
@@ -1692,7 +1694,7 @@ y_2
 \end{pmatrix}\Bigg\rangle^2 =  ⟨\phi(x), \phi(y)⟩.
 \\
 \\
-K(x, y) =  ⟨\phi(x), \phi(y)⟩_H. \\
+k(x, y) =  ⟨\phi(x), \phi(y)⟩_H. \\
 
 ⟨x, y⟩ = 0 \text{ if } x ⊥ y \quad \text{ (orthogonal)}.\\
 \text{For } U, V ⊆ X, U ⊥ V \text{ if } x ⊥ y \text{ for } ∀ x ∈ U, ∀ y ∈ V. \\
@@ -1749,19 +1751,19 @@ a x + by, z
 \text{Symmetry:} & \quad ⟨x, y⟩_H = ⟨y, x⟩_H  , \\
 \text{Positive definite:} & \quad ⟨x, x⟩_H ≥ 0, \quad ⟨x, x⟩_H = 0 \text{ iff } x =0  . \\
 \\
-\text{Polynomials of degree exactly $d$: } \quad & K(x, y) = ⟨x, y ⟩^d, \\
- \text{Polynomials of degree up to $d$: } \quad & K(x, y) = \Big(⟨x, y ⟩ +1 \Big)^d. \\
-\text{Gaussian kernels: } \quad &  K(x, y) =  \exp \Bigg(
+\text{Polynomials of degree exactly $d$: } \quad & k(x, y) = ⟨x, y ⟩^d, \\
+ \text{Polynomials of degree up to $d$: } \quad & k(x, y) = \Big(⟨x, y ⟩ +1 \Big)^d. \\
+\text{Gaussian kernels: } \quad &  k(x, y) =  \exp \Bigg(
   - \frac{‖x - y ‖^2_2 }{2 \sigma^2}
   \Bigg).
 \\
 
-&K(x, y) = \int_x \int_y K(x, y) g(x) g(y) dx dy ≥ 0, \quad \text{for $ \forall g \in $ \{nonzero continuous functions\}.} \\
+&k(x, y) = \int_x \int_y k(x, y) g(x) g(y) dx dy ≥ 0, \quad \text{for $ \forall g \in $ \{nonzero continuous functions\}.} \\
 & \begin{pmatrix}
-K(x_1, x_1) & K(x_1, x_2) & \cdots & K(x_1, x_n)  \\
-K(x_2, x_1) & K(x_2, x_2) & \cdots & K(x_2, x_n)  \\
+k(x_1, x_1) & k(x_1, x_2) & \cdots & k(x_1, x_n)  \\
+k(x_2, x_1) & k(x_2, x_2) & \cdots & k(x_2, x_n)  \\
  &  \ddots &  &  \\
-K(x_n, x_1) & K(x_n, x_2) & \cdots & K(x_n, x_n)  \\
+k(x_n, x_1) & k(x_n, x_2) & \cdots & k(x_n, x_n)  \\
 \end{pmatrix} \text{ is positive semidefinite for $\forall x_1, x_2, \cdots , x_n \in X$}.
 \\
 \mathcal{L}(\boldsymbol \theta, \boldsymbol X, \boldsymbol y) & = (\boldsymbol y - \boldsymbol X \boldsymbol \theta)^\top (\boldsymbol y - \boldsymbol X \boldsymbol \theta), \\
@@ -1806,7 +1808,7 @@ f(\boldsymbol x) & = ⟨\boldsymbol \theta, \boldsymbol x⟩ =
  \boldsymbol {\theta} &  = \lambda^{-1} \boldsymbol X^\top (\boldsymbol y - \boldsymbol{X\theta}) = \boldsymbol{X}^\top \boldsymbol{\alpha}. \\
 & \text{where } \\
 \boldsymbol{\alpha} &  = \lambda^{-1} (\boldsymbol y - \boldsymbol{X\theta}) \\
-\lambda \boldsymbol{\alpha} & =  (\boldsymbol y - \boldsymbol{X X^{\top}\alpha}) \quad \text{ where } \boldsymbol \theta = \boldsymbol x^\top \boldsymbol \alpha
+\lambda \boldsymbol{\alpha} & =  (\boldsymbol y - \boldsymbol{X X^{\top}\alpha}) \quad \text{ where } \boldsymbol \theta = \boldsymbol X^\top \boldsymbol \alpha
 \\
 (\boldsymbol{X X^\top} + \lambda \boldsymbol I_n)
 \boldsymbol{\alpha} & = \boldsymbol y \\
@@ -1822,14 +1824,16 @@ f(\boldsymbol x) & = (\boldsymbol \theta, \boldsymbol x) = \Bigg\langle \sum^n_{
 \\
 f_{\boldsymbol z} (\boldsymbol x) = \langle  \boldsymbol x , \boldsymbol z \rangle.
 \\
-& G_{ij} =  \langle \phi(\boldsymbol x_i), \phi(\boldsymbol x_j) \rangle = K(\boldsymbol x_i, \boldsymbol x_j).
 \\
-\boldsymbol G = & \begin{pmatrix}
-K(\boldsymbol x_1, \boldsymbol x_1) & K(\boldsymbol x_1, \boldsymbol x_2) & \cdots & K(\boldsymbol x_1, \boldsymbol x_n)  \\
-K(\boldsymbol x_2, \boldsymbol x_1) & K(\boldsymbol x_2, \boldsymbol x_2) & \cdots & K(\boldsymbol x_2, \boldsymbol x_n)  \\
+\boldsymbol K = & \begin{pmatrix}
+k(\boldsymbol x_1, \boldsymbol x_1) & k(\boldsymbol x_1, \boldsymbol x_2) & \cdots & k(\boldsymbol x_1, \boldsymbol x_n)  \\
+k(\boldsymbol x_2, \boldsymbol x_1) & k(\boldsymbol x_2, \boldsymbol x_2) & \cdots & k(\boldsymbol x_2, \boldsymbol x_n)  \\
  &  \ddots &  &  \\
-K(\boldsymbol x_n, \boldsymbol x_1) & K(\boldsymbol x_n, \boldsymbol x_2) & \cdots & K(\boldsymbol x_n, \boldsymbol x_n)  \\
-\end{pmatrix}. \\
+k(\boldsymbol x_n, \boldsymbol x_1) & k(\boldsymbol x_n, \boldsymbol x_2) & \cdots & k(\boldsymbol x_n, \boldsymbol x_n)  \\
+\end{pmatrix}, \\
+\\
+& K_{ij} =  \langle \phi(\boldsymbol x_i), \phi(\boldsymbol x_j) \rangle = k(\boldsymbol x_i, \boldsymbol x_j).
+\\
 G_{ij} = \langle \boldsymbol x_i, \boldsymbol x_i \rangle.
 \\
 \boldsymbol v^\top \boldsymbol G \boldsymbol v &=
@@ -1863,9 +1867,60 @@ f(\boldsymbol x)  = \sum^n_{i=1} \alpha_i \langle \boldsymbol x_i, \boldsymbol x
 f(x) = f_1 x_1 + f_2 x_2 + f_3 x_1 x_2. \\
 f(\cdot) = [f_1, f_2, f_3]^\top. \\
 f(x) = f(\cdot)^\top \phi (x) = \langle (\cdot) \rangle
-f(x) = f(\cdot)^\top \phi (x) = \langle f(\cdot), \phi (x) \rangle 
+f(x) = f(\cdot)^\top \phi (x) = \langle f(\cdot), \phi (x) \rangle \\
+\boldsymbol \theta = \boldsymbol X^\top \boldsymbol \alpha, \quad \text{ where } \boldsymbol \alpha \in \mathbb{R}^n. \\
+C_{\boldsymbol z}(\boldsymbol x) = \langle \boldsymbol x, \boldsymbol z \rangle . \\
+f: X \rightarrow \mathbb{R} \\
 
+& \text{$\mathcal{H}$ be a vector space over ℝ and $f, g, h ∈\mathcal{H}$.} \\
+& ⟨·, ·⟩ : \mathcal{H} × \mathcal{H} → \mathbb{R}, \\
+& ⟨ a f + b g, h⟩_{\mathcal{H}} = a ⟨ f, h⟩_{\mathcal{H}} + b ⟨ g, h ⟩_{\mathcal{H}} & \text{(linear)}, \\
+& ⟨ f, g⟩_{\mathcal{H}} = ⟨ g, f⟩_{\mathcal{H}} & \text{(symmetry)}, \\
+& ⟨ f, f⟩_{\mathcal{H}} \ge 0, \quad ⟨ f, f⟩_{\mathcal{H}} =0 \text{ iff } f =0, & \text{(positive definiteness)}. \\
+& K(\cdot, y) = [y_1, y_2, y_1 y_2]^\top = \phi(y). \\
+& \langle K(\cdot, y), \phi(x) \rangle_{\mathcal{H}} = a x_1 + bx_2 + c x_1 x_2, \quad \text{ where } a = y_1, b=y_2, \text{ and } c=y_1y_2. \\
+\\
+& \langle K(\cdot, x), \phi(y) \rangle_{\mathcal{H}} = u y_1 + v y_2 + w y_1 y_2, \quad \text{ where } u = x_1, v=x_2, \text{ and } w=x_1x_2. \\
+& K(x, y) = \langle K(\cdot, x), \phi(y) \rangle_{\mathcal{H}} = \langle K(\cdot, x), K(\cdot, y)\rangle_{\mathcal{H}} =  \langle \phi(x), \phi(y)  \rangle_{\mathcal{H}}. \\
+& K(x, y)  =  \langle \phi(x), \phi(y)  \rangle_{\mathcal{H}}. \\
+& l: X \rightarrow \mathbb{F}, \quad \mathbb{F} \in \{ \mathbb{R}, \mathbb{C}\}, \text{ there is an exactly one } x_l \in X, \\
+\\
+& l(x) = \langle x_l, x \rangle \text{ for } \forall x \in X.\\ \text{ and } \| l \|_{X \rightarrow \mathbb{F} } = \| x_l \|_{X}. \\
+& d(x, y) = \| x - y \|. \\
+& \| f \|_p = \Bigg(
 
+  \int^b_a \mid f(x) \mid^p dx
+  \Bigg)^{1/p}. \\
+&  \Bigg(\mathbb{R}, \mid \cdot \mid \Bigg), \\
+&  \Bigg(\mathbb{R}^n, \| \boldsymbol x \|_p = \Big( \sum_{i=1}^n \mid \boldsymbol x_i \mid^p \Big)^{1/p} \Bigg). \\
+& \Bigg(
+ C[a, b], \langle x, y \rangle = \int^b_a f(x) g(x) dx
+\Bigg) \\
+& l^2 = \Big\{ (x_i)_{i=1}^{\infty} \Big\}, \quad \sum_{i=0}^{\infty} |x_i|^2 < \infty, \quad  \langle \{ (x_i)_{i=1}^{\infty} \}, \{(y_i)_{i=1}^{\infty} \} \rangle_{l^2} = \sum_{i=1}^\infty x_i y_i \\
+
+&\text{For } g ∈ X, A_g : X → \mathbb{R}, \text{ with } A_g f \text{ define as  } A_g f  = \langle f, g \rangle_X, \\
+& A_g \text{ is a linear functional}. \\
+A_g(a f_1 + b f_2) & =  \langle af_1+bf_2, g \rangle_X \\
+&=  a \langle f_1, g \rangle_X + b \langle f_2, g \rangle_X \\
+&= a A_g f_1 + b A_g f_2. \\
+& \mathcal{F}' = \{L: \mathcal{F} \rightarrow \mathbb{R} \text{ or } \mathbb{C} \mid L \text{ is linear and bounded.} \}.  \\
+
+& (\theta_1 \quad \theta_2 \quad \theta_3 \quad \cdots \quad \theta_n)
+\begin{pmatrix}
+x_1  \\
+x_2\\
+\vdots \\
+x_n \\
+\end{pmatrix} = b, \quad b ∈ ℝ.\\
+& L(\boldsymbol x) = b. \\
+& L: X \rightarrow \mathbb{F}, \quad \mathbb{F} \in \{ \mathbb{R}, \mathbb{C}\}, \text{ there is an exactly one } g \in X, \\
+\\
+&k(x, y) = \langle \phi(x), \phi(y) \rangle_{H}. \\
+\\
+& k: X \times X \rightarrow \mathbb{R}.\\
+& \boldsymbol Q^\top \boldsymbol Q = \boldsymbol Q^\top \boldsymbol Q = \boldsymbol I. \\
+& k: X, X \rightarrow \mathbb{R}. \\
+& k(x_i, x_j) = \Big\langle \phi(x_i), \phi(x_j) \Big\rangle_{\mathcal{H}}
 \end{align}
 
 $$
